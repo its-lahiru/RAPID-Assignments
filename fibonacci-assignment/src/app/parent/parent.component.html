@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <h2>Fibonacci Sequence Checker</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <app-child (getInputValue)="receivedValue($event)"></app-child>
+        </div>
+        <div class="col-4">
+            <a class="btn btn-primary" (click)="getFibonacciSequence()">Check</a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <h5>{{message}}</h5>
+        <h5 *ngIf="isFibonacci">{{fiboSequence}}</h5>
+    </div>
+</div>
